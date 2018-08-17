@@ -7,7 +7,6 @@
     "prepare": "npm run test && npm run build",
     "test": "node_modules/.bin/jest",
     "postversion": "npm publish",
-    "prepublish": "npm run test",
     "postpublish": "git push"
   },
   "main": "dist/instance-transfer.min.js",
