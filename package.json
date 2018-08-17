@@ -1,11 +1,14 @@
 {
   "name": "instance-transfer",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "dependencies": {},
   "scripts": {
     "build": "rm -rf ./dist && node_modules/.bin/tsc -p ./ && node_modules/.bin/babel ./dist/index.js -o ./dist/instance-transfer.min.js",
     "prepare": "npm run test && npm run build",
-    "test": "node_modules/.bin/jest"
+    "test": "node_modules/.bin/jest",
+    "postversion": "npm publish",
+    "prepublish": "npm run test",
+    "postpublish": "git push"
   },
   "main": "dist/instance-transfer.min.js",
   "types": "src/index.ts",
