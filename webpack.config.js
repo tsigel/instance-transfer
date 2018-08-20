@@ -2,8 +2,11 @@ module.exports = {
     entry: './src/index.ts',
     output: {
         path: __dirname + '/dist',
+        library: "instanceTransfer",
         publicPath: '/',
-        filename: 'instance-transfer.min.js'
+        libraryTarget: 'umd',
+        filename: 'instance-transfer.min.js',
+        globalObject: 'this'
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
